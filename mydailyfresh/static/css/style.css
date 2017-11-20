@@ -81,7 +81,7 @@ a{
     width: 520px;
     height: 40px;
     float: left;
-    background: url(images/selectpic.png) no-repeat 10px;
+    background: url(../images/selectpic.png) no-repeat 10px;
     padding-left: 38px;
     color:#999;
     border:1px solid #37ab40;
@@ -110,7 +110,7 @@ a{
   width: 158px;
   height: 40px;
   border: 1px solid #dddddd;
-  background: #f7f7f7 url(images/car.png) no-repeat 14px;
+  background: #f7f7f7 url(../images/car.png) no-repeat 14px;
   color: #37ab40;
   padding-left: 57px;
   margin-top: 35px;
@@ -125,7 +125,7 @@ a{
   width: 40px;
   height: 40px;
   border: 1px solid #ff8800;
-  background: #ff8800 url(images/0.png) no-repeat center;
+  background: #ff8800 url(../images/0.png) no-repeat center;
   text-align: center;
   margin-top: 35px;
   position: absolute;
@@ -185,22 +185,22 @@ a{
   box-sizing: border-box;
 }
 .menulist .fruit{
-  background:url(images/fruit.png) no-repeat 34px 12px;
+  background:url(../images/fruit.png) no-repeat 34px 12px;
 }
 .menulist .fish{
-  background:url(images/fish.png) no-repeat 31px 12px;
+  background:url(../images/fish.png) no-repeat 31px 12px;
 }
 .menulist .meat{
-  background:url(images/icons.png) no-repeat 31px 12px;
+  background:url(../images/icons.png) no-repeat 31px 12px;
 }
 .menulist .eggs{
-  background:url(images/icons.png) no-repeat 31px -32px;
+  background:url(../images/icons.png) no-repeat 31px -32px;
 }
 .menulist .veget{
-  background:url(images/icons.png) no-repeat 31px -75px;
+  background:url(../images/icons.png) no-repeat 31px -75px;
 }
 .menulist .foods{
-  background:url(images/icons.png) no-repeat 31px -120px;
+  background:url(../images/icons.png) no-repeat 31px -120px;
 }
 .bposter{
   width:760px;
@@ -301,7 +301,7 @@ a{
 .detail .detailinfo1{
   width: 200px;
   height: 302px;
-  background: url(images/banner.png) no-repeat;
+  background: url(../images/banner.png) no-repeat;
   padding-top:30px;
   box-sizing: border-box;
   float: left;
