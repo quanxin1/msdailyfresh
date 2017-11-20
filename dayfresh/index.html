@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天天生鲜</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="jquery-1.12.4.min.js"></script>
+    <script src="fresh2.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            url:"database.json",
+            type:"get",
+            dataType:"json"
+        })
+        .done(function(data){
+            // alert(data.code);
+            if(data.code==1){
+                // alert(typeof(data.code));
+                $(".welinfo .name").html(data.data.name);
+                $(".welinfo div").eq(0).addClass("active").siblings().removeClass("active");
+            }
+        })
+        .faile(function(){
+            alert("链接超时");
+        })
+    </script>
+</head>
+<body>
+    <div class="webNav">
+        <div class="index">
+            <p class="welcom">欢迎来到天天生鲜！</p>
+            <ul class="welinfo">
+                <li><a href="##">我的订单</a></li>
+                <li class="part">|</li>
+                <li><a href="##">我的购物车</a></li>
+                <li class="part">|</li>
+                <div>
+                    <li ><a href="##">登录</a></li>
+                    <li class="part">|</li>
+                    <li><a href="##">注册</a></li>
+                </div class="active">
+                <div>
+                    <li class="name"><a href="##">张山</a></li>
+                    <li>欢迎您：</li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="head">
+        <div class="head1">
+            <h1 class="logo"><img src="images/logo.png" alt="天天生鲜"></h1>
+            
+            <div  class="select"><input type="text" id="sel" value="请输入内容"></div>
+            <input class="selecbutton" type="button" value="搜索">
+
+            
+            <input class="zero" type="button">
+            <div class="car">我的购物车</div>
+            
+        </div>
+    </div>
+    <div class="type">
+        <div class="lotype">全部商品分类</div>
+        <ul class="title">
+            <li><a href="##">首页</a></li>
+            <li class="part">|</li>
+            <li><a href="##">手机生鲜</a></li>
+            <li class="part">|</li>
+            <li><a href="##">抽奖</a></li>
+        </ul>
+    </div>
+    <div class="chmenu">
+        <ul class="menulist">
+            <li><a class="fruit" href="">新鲜水果</a></li>
+            <li><a class="fish" href="">海鲜水产</a></li>
+            <li><a class="meat" href="">猪牛羊肉</a></li>
+            <li><a class="eggs" href="">禽类蛋品</a></li>
+            <li><a class="veget" href="">新鲜蔬菜</a></li>
+            <li><a class="foods" href="">速冻食品</a></li>
+        </ul>
+        <div class="bposter" id="solid">
+            <ul id="listnum">
+                <li><a href=""><img src="images/slide01.png" alt="商品图片"></a></li>
+                <li><a href=""><img src="images/slide02.png" alt="商品图片"></a></li>
+                <li><a href=""><img src="images/slide03.png" alt="商品图片"></a></li>
+                <li><a href=""><img src="images/slide04.png" alt="商品图片"></a></li>
+                <!--<li><a href=""><img src="images/slide01.png" alt="商品图片"></a></li>-->
+            </ul>
+            <span class="button1" id="btn1"><img src="images/left.png" ></span>
+            <span class="button2" id="btn2"><img src="images/right.png" ></span>
+            <!--<div class="button3" id="btn3"><img src="images/point.png"></div>-->
+            <span class="point">
+                <!--<li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>-->
+            </span>
+        </div>
+        <div class="sposter"><img src="images/spornt1.png" alt="吃货暑假趴"></div>
+        <div class="sposter"><img src="images/spornt2.png" alt="零食保健0元抢"></div>
+    </div>
+    <div class="food1">
+        <a class="freshfood" href="###">新鲜水果</a>
+        <p>|</p>
+        <a href="###">鲜芒</a>
+        <a href="###">加州提子</a>
+        <a href="###">亚马逊牛油果</a>
+        <a  class= "lookmore" href="###">查看更多&gt;&gt;</a>
+    </div>
+    <div class="detail">
+        <div class="detailinfo1">
+            <span style="font-size:30px">时令水果</span>
+            <span style="font-size:16px">高品质低价格</span>
+            <img src="images/freshfruit.png" alt="时令水果" style="padding-top: 10px">
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">草莓</span>
+            <img src="images/caomei.png" alt="草莓">
+            <span style="font-size:20px">￥38.00</span>
+            </a>
+
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">泰国柠檬</span>
+            <img src="images/ningmeng.png" alt="泰国柠檬">
+            <span style="font-size:20px">￥38.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">维多利亚葡萄</span>
+            <img src="images/putao.png" alt="维多利亚葡萄">
+            <span style="font-size:20px">￥38.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">进口奇异果</span>
+            <img src="images/mihoutao.png" alt="进口奇异果">
+            <span style="font-size:20px">￥38.00</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="food1">
+        <a class="freshfood" href="###">海鲜水产</a>
+        <p>|</p>
+        <a href="###">深海鳕鱼</a>
+        <a href="###">帝王蟹</a>
+        <a  class= "lookmore" href="###">查看更多&gt;&gt;</a>
+    </div>
+    <div class="detail">
+        <div class="detailinfo1" style="background: url(images/banner1.png) no-repeat;">
+            <span style="font-size:30px">海鲜盛宴</span>
+            <span style="font-size:16px">极致爽滑</span>
+            <img style="margin-right: -18px" src="images/xia.png" alt="海鲜盛宴">
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">青岛野生海捕大青虾</span>
+            <img src="images/daqingxia.png" alt="青岛野生海捕大青虾">
+            <span style="font-size:20px">￥10.00</span>
+            </a>
+
+        </div>
+        <div>
+            <a class="detailinfo" href="##" id="solidhaixian">
+                <span style="font-size:20px;position: absolute">海鲜</span>
+                <ul id="listhaixian">
+                    <li><img src="images/beike.png" alt="扇贝"></li>
+                    <li><img src="images/wuchangyu.png" alt="武昌鱼"></li>  
+                    
+                </ul>
+                <span style="font-size:20px">￥42.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##" id="solidhaixian1">
+            <span style="font-size:20px">冷冻秋刀鱼蛤蜊</span>
+            <ul id="listhaixian1">
+                <li><img src="images/qiudaoyu.png" alt="冷冻秋刀鱼"></li>
+                <li><img src="images/geli.png" alt="蛤蜊"></li>
+            </ul>
+            <span style="font-size:20px">￥56.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">基围虾</span>
+            <img src="images/jiweixia.png" alt="基围虾">
+            <span style="font-size:20px">￥26.80</span>
+            </a>
+        </div>
+    </div>
+
+     <div class="food1">
+        <a class="freshfood" href="###">猪牛羊肉</a>
+        <p>|</p>
+        <a href="###">澳洲牛肉</a>
+        <a href="###">乌克兰大白猪</a>
+        <a  class= "lookmore" href="###">查看更多&gt;&gt;</a>
+    </div>
+    <div class="detail">
+        <div class="detailinfo1" style="background: url(images/banner3.png) no-repeat;position: relative">
+            <span style="font-size:30px">新鲜特供</span>
+            <span style="font-size:16px">想吃就吃</span>
+            <img src="images/xiangqi.png" alt="xiangqi" style="position: absolute;top: -20px;left: 10px;opacity: 0.3">
+            <img src="images/zhuniuyangrou.png" alt="新鲜特供" style="padding-top: 50px;">
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">万年豚右击土猪精</span>
+            <img src="images/zhurou.png" alt="万年豚右击土猪精">
+            <span style="font-size:20px">￥10.00</span>
+            </a>
+
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">中粮安之选澳洲牛肉</span>
+            <img src="images/aozhouniurou.png" alt="中粮安之选澳洲牛肉">
+            <span style="font-size:20px">￥42.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">大洋世家舟山羊肉串</span>
+            <img src="images/yangrouchuan.png" alt="大洋世家舟山羊肉串">
+            <span style="font-size:20px">￥56.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">问鼎食神 牛肉酱块</span>
+            <img src="images/niuroukuai.png" alt="问鼎食神 牛肉酱块">
+            <span style="font-size:20px">￥78.60</span>
+            </a>
+        </div>
+    </div>
+
+
+     <div class="food1">
+        <a class="freshfood" href="###">新鲜蔬菜</a>
+        <p>|</p>
+        <a href="###">乳黄瓜</a>
+        <a href="###">紫薯</a>
+        <a  class= "lookmore" href="###">查看更多&gt;&gt;</a>
+    </div>
+    <div class="detail">
+        <div class="detailinfo1" style="background: url(images/banner1.png) no-repeat;">
+            <span style="font-size:30px">绿色有机</span>
+            <span style="font-size:16px">安心之选</span>
+            <img  src="images/shucai.png" alt="绿色有机">
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">OCEAN GALA冰岛</span>
+            <img src="images/ruhuanggua.png" alt="乳黄瓜">
+            <span style="font-size:20px">￥10.00</span>
+            </a>
+
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">西红柿</span>
+            <img src="images/tomato.png" alt="西红柿">
+            <span style="font-size:20px">￥4.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">紫薯</span>
+            <img src="images/zishu.png" alt="紫薯">
+            <span style="font-size:20px">￥7.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">甜玉米</span>
+            <img src="images/yumi.png" alt="玉米">
+            <span style="font-size:20px">￥3.00</span>
+            </a>
+        </div>
+    </div>
+
+
+
+ <div class="food1">
+        <a class="freshfood" href="###">禽类蛋品</a>
+        <p>|</p>
+        <a href="###">包泥叫花鸡</a>
+        <a href="###">新鲜咸鸭蛋</a>
+        <a  class= "lookmore" href="###">查看更多&gt;&gt;</a>
+    </div>
+    <div class="detail">
+        <div class="detailinfo1" style="background: url(images/yuandichuchan.png) no-repeat;">
+            <span style="font-size:30px">原地出产</span>
+            <span style="font-size:16px">新鲜美味</span>
+            <img style="margin-right: -18px" src="images/egg.png" alt="原地出产" style="margin-top: 10px">
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">新鲜大鸡腿</span>
+            <img src="images/jitui.png" alt="新鲜大鸡腿">
+            <span style="font-size:20px">￥30.00</span>
+            </a>
+
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">现杀白条鸡</span>
+            <img src="images/baitiaoji.png" alt="现杀白条鸡">
+            <span style="font-size:20px">￥28.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">新鲜咸鸭蛋</span>
+            <img src="images/xianyadan.png" alt="新鲜咸鸭蛋">
+            <span style="font-size:20px">￥8.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">农家土鸡蛋</span>
+            <img src="images/tujidan.png" alt="农家土鸡蛋">
+            <span style="font-size:20px">￥68.00</span>
+            </a>
+        </div>
+    </div>
+
+
+ <div class="food1">
+        <a class="freshfood" href="###">美味甜点</a>
+        <p>|</p>
+        <a href="###">经典巧乐兹</a>
+        <a href="###">甜筒</a>
+        <a  class= "lookmore" href="###">查看更多&gt;&gt;</a>
+    </div>
+    <div class="detail">
+        <div class="detailinfo1" style="background: url(images/banner6.png) no-repeat;">
+            <span style="font-size:30px">酷爽饮品</span>
+            <span style="font-size:16px">冰爽美味</span>
+            <img style="margin-right: -46px;margin-top:5px" src="images/tiandian.png" alt="酷爽饮品">
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">慕斯蛋糕</span>
+            <img src="images/musi.png" alt="慕斯蛋糕">
+            <span style="font-size:20px">￥13.00</span>
+            </a>
+
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">巧乐兹冰激凌</span>
+            <img src="images/bingjiling.png" alt="巧乐兹冰激凌">
+            <span style="font-size:20px">￥18.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">巧克力甜筒</span>
+            <img src="images/tiantong.png" alt="巧克力甜筒">
+            <span style="font-size:20px">￥38.00</span>
+            </a>
+        </div>
+        <div>
+            <a class="detailinfo" href="##">
+            <span style="font-size:20px">哈根达斯</span>
+            <img src="images/hagendasi.png" alt="哈根达斯">
+            <span style="font-size:20px">￥28.00</span>
+            </a>
+        </div>
+    </div>
+    <div style="height: 28px;border-bottom: 2px solid #4ab14e"></div>
+    <div class="bottom">
+        <ul class="link">
+            <li>关于我们</li>
+            <li style="margin:0 3px">|</li>
+            <li>联系我们</li>
+            <li style="margin:0 3px">|</li>
+            <li>招聘人才</li>
+            <li  style="margin:0 3px">|</li>
+            <li>友情链接</li>
+        </ul>
+        <div class="link1">CopyRight @2016 北京天天生鲜信息技术有限公司 All Right Reserver</div>
+        <div class="link1">电话：010-88888888&nbsp;&nbsp;京ICP备********8号</div>
+    </div>
+</body>
+</html>
